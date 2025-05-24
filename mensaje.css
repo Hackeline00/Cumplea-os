@@ -1,0 +1,103 @@
+/* mensaje.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Sacramento&display=swap');
+
+body {
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0 20px 80px; /* espacio abajo para que no tape el footer ni el botón */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: #5a3e1b;
+}
+
+.tarjeta {
+  background-color: #fff5e1;
+  max-width: 480px;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tarjeta h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #d94e67;
+  letter-spacing: 1.5px;
+}
+
+.foto-romantica {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(217, 78, 103, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.foto-romantica:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 12px 0;
+  color: #6f4e37;
+}
+
+.tarjeta h2 {
+  font-family: 'Sacramento', cursive;
+  font-size: 2rem;
+  margin-top: 30px;
+  color: #d94e67;
+}
+
+.boton-corazon {
+  text-align: center;
+  margin: 20px 0 40px;
+  width: 100%;
+}
+
+.boton-corazon button {
+  background-color: #d94e67;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(217, 78, 103, 0.7);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  max-width: 250px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.boton-corazon button:hover {
+  background-color: #b73d55;
+  transform: scale(1.05);
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  color: #6f4e37;
+  background-color: #fff5e1;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}

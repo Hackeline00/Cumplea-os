@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sorpresa de Cumpleaños</title>
+  <link rel="stylesheet" href="sorpresa.css" />
+  <link rel="icon" type="image/png" href="imagenes/alan.png" />
+</head>
+<body>
+  <div class="container">
+    <!-- Video principal -->
+    <div class="center-video">
+      <video autoplay loop muted playsinline>
+        <source src="imagenes/video.mp4" type="video/mp4" />
+        Tu navegador no soporta videos HTML5.
+      </video>
+    </div>
+
+    <!-- Botón de regreso arriba de los títulos -->
+    <div class="boton-regreso">
+      <button onclick="window.history.back()">❤️ Regresar con amor</button>
+    </div>
+
+    <!-- Títulos -->
+    <h1>¡Feliz Cumpleaños!</h1>
+    <h2>Te prometo siempre acompañarte, apoyarte y aconsejarte, darte las herramientas necesarias ayudarte en la búsqueda de las mismas, para que logres tus sueños</h2>
+
+    <!-- Contenedor de las tarjetas -->
+    <div class="cards-container">
+      <!-- Tarjetas con efecto flip -->
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="imagenes/imag2.png" alt="Imagen 8" />
+          </div>
+          <div class="flip-card-back">
+            <p>Nunca recibas menos de lo que eres, este perfume representa el primer aroma que supe que deseabas, lo mereces.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="imagenes/img2.jpeg" alt="Imagen 2" />
+          </div>
+          <div class="flip-card-back">
+            <p>Amo que te sientas atractivo, darte seguridad que sepas que destacas por quien eres y tu aroma siempre te identifica como alguien que huele delicioso.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="imagenes/img3.jpeg" alt="Imagen 3" />
+          </div>
+          <div class="flip-card-back">
+            <p>La comodidad y tu espacio personal es prioridad porque es un tiempo de inspiración y automotivación, quiero que seas feliz contigo mismo.💫</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="imagenes/imag1.png" alt="Imagen 4" />
+          </div>
+          <div class="flip-card-back">
+            <p>Todo lo que usas te hace lucir maravilloso porque tienes luz propia, invierte en ti✨</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="imagenes/img5.jpeg" alt="Imagen 5" />
+          </div>
+          <div class="flip-card-back">
+            <p>Compromete contigo mismo, traza tus metas y siéntete orgulloso de ti mismo, hoy eres mejor que ayer, sigue construyéndote💍</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="imagenes/imag3.jpeg" alt="Imagen 6" />
+          </div>
+          <div class="flip-card-back">
+            <p>Caminas en los zapatos del niño que siempre soñó con ser tú, trabaja por lo que quieres, solo tú puedes cambiar tu mundo.❤️</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Con todo mi amor</p>
+  </footer>
+</body>
+</html>

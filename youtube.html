@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Cumpleaños - South Park Edition</title>
+  <link rel="icon" href="images/icono.png.jpg" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header>
+  <div class="yt-left">
+    <img src="images/youtubelogo.jpeg" alt="YouSouthTube Logo" class="logo-img">
+    <span class="logo-text">YouTube</span>
+  </div>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Buscar">
+    <button id="searchBtn" onclick="buscar()">
+      <img src="images/lupa.jpeg" alt="Buscar" class="icon">
+    </button>
+    <button id="volverBtn" onclick="volverInicio()" style="display: none;">Volver al inicio</button>
+  </div>
+  <div class="yt-right">
+    <img src="images/alan.png" alt="Avatar" class="avatar">
+  </div>
+</header>
+
+<main class="container">
+  <div class="video-section">
+    <div class="video-container">
+      <video id="introVideo" width="100%" height="315" autoplay muted>
+        <source src="images/video.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+
+      <video id="cancionVideo" width="100%" height="315" controls style="display: none;">
+        <source src="images/cancion.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+
+      <h1>I just called to say it's your birthday, my love ❤️🎉📞 </h1>
+      <p class="views">1,500,099 vistas • 26 de mayo de 2025</p>
+    </div>
+
+    <div class="comments">
+      <h2>Comentarios</h2>
+      <div class="comment"><img src="images/cartman.png" alt="Cartman" /><div><strong>Cartman</strong><p>¡Feliz cumpleaños! Pero no te emociones, ¡no eres tan genial como yo!</p></div></div>
+      <div class="comment"><img src="images/stan.jpeg" alt="Stan" /><div><strong>Stan</strong><p>Espero que tengas un gran día. ¡Sigue siendo increíble!</p></div></div>
+      <div class="comment"><img src="images/kyle.jpeg" alt="Kyle" /><div><strong>Kyle</strong><p>¡Felicidades! Recuerda que la vida no es solo juegos y pastel...</p></div></div>
+      <div class="comment"><img src="images/kenny.jpeg" alt="Kenny" /><div><strong>Kenny</strong><p>*(murmullos incomprensibles)*</p></div></div>
+      <div class="comment"><img src="images/randy.jpg" alt="Randy Marsh" /><div><strong>Kenny</strong><p>¡Feliz cumple, amigo! Hoy eres como el mejor “Tegridy Weed” del año: puro fuego, sin que nadie te venga a cortar el rollo. ¡A romperla y a celebrar como un verdadero Marsh!</p></div></div>    
+    </div>
+  </div>
+
+  <aside class="suggestions">
+    <div class="banner-ad">
+      <video src="images/comercial.mp4" autoplay loop muted playsinline class="banner-video"></video>
+    </div>
+
+    <h3>Sugerencias</h3>
+    <ul>
+      <li><img src="images/video8.jpeg" alt="">El padrino pelicula para felicitar a un geminis</li>
+      <li><img src="images/video1.jpg" alt="">Stan cumpleaños</li>
+      <li><img src="images/video2.jpeg" alt=""> Cartman se roba el pastel</li>
+      <li><img src="images/video3.jpg" alt=""> Teenage Mutant Ninja Turtles</li>
+      <li><img src="images/video4.jpeg" alt=""> Retrogamming</li>
+      <li><img src="images/video5.jpeg" alt=""> Gossip Girl: Datos interesantes de Chuck Bass</li>
+      <li><img src="images/video6.jpg" alt=""> Aprende SQL desde 0</li>
+      <li><img src="images/video7.jpeg" alt="">LOL:Sube a platino</li>
+    </ul>
+  </aside>
+</main>
+
+<footer>
+  <p>&copy; 2025 Con todo mi amor</p>
+</footer>
+<script>
+  function buscar() {
+    const btn = document.getElementById("searchBtn");
+    btn.style.backgroundColor = "#ccc"; // gris claro
+    setTimeout(() => {
+      window.location.href = "index.html"; // redirige a la página principal
+    }, 200); // pequeño retraso para mostrar el color
+  }
+
+  function volverInicio() {
+    const videoSection = document.querySelector(".video-section");
+    const suggestions = document.querySelector(".suggestions");
+    const volverBtn = document.getElementById("volverBtn");
+
+    videoSection.style.display = "block";
+    suggestions.innerHTML = ` 
+      <div class="banner-ad">
+        <img src="images/banner-anuncio.jpg" alt="Publicidad especial de cumpleaños">
+      </div>
+      <h3>Sugerencias</h3>
+      <ul>
+        <li><img src="images/video8.jpeg" alt="">El padrino pelicula para felicitar a un geminis</li>
+        <li><img src="images/video1.jpg" alt="">Stan cumpleaños</li>
+        <li><img src="images/video2.jpeg" alt=""> Cartman se roba el pastel</li>
+        <li><img src="images/video3.jpg" alt=""> Teenage Mutant Ninja Turtles</li>
+        <li><img src="images/video4.jpeg" alt=""> Retrogamming</li>
+        <li><img src="images/video5.jpeg" alt=""> Gossip Girl: Datos interesantes de Chuck Bass</li>
+        <li><img src="images/video6.jpg" alt=""> Aprende SQL desde 0</li>
+        <li><img src="images/video7.jpeg" alt="">LOL:Sube a platino</li>
+      </ul>
+    `;
+    volverBtn.style.display = "none";
+    document.getElementById("searchInput").value = "";
+  }
+
+  const introVideo = document.getElementById("introVideo");
+  const cancionVideo = document.getElementById("cancionVideo");
+
+  introVideo.addEventListener("ended", () => {
+    introVideo.style.display = "none";
+    cancionVideo.style.display = "block";
+    cancionVideo.play();
+  });
+</script>
+
+</body>
+</html>

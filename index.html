@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feliz Cumpleaños, Mi Amor</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .oculto {
+      display: none;
+    }
+
+    .boton-mas {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff4081;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+      margin-top: 20px;
+    }
+
+    .boton-mas:hover {
+      background-color: #e91e63;
+    }
+
+    .video-container {
+      text-align: center;
+    }
+  </style>
+   <link rel="icon" type="image/png" href="imagenes/alan.png">
+</head>
+<body>
+
+<header>
+  <h1>🎉 ¡Feliz 28 Años, Amor! 🎂</h1>
+  <p>Un día especial para ti que eres muy especial</p>
+</header>
+
+<nav>
+  <a href="mensaje.html">Mensaje</a>
+  <a href="sorpresa.html">Sorpresa</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
+
+<main>
+  <section id="mensaje">
+    <h2>Te amo muchísimo ❤️</h2>
+    <p>Gracias por ser quien eres, por tu amor, tu paciencia y tu risa contagiosa.</p>
+    <p>Que este nuevo año te traiga alegría, éxitos y mucha felicidad.</p>
+    <p>Vas a tener todo lo que mereces❤️ por que eres maravilloso.</p>
+  </section>
+
+  <section id="sorpresa">
+    <h2>Mira...</h2>
+    <button id="btnSorpresa" onclick="mostrarSorpresa()">Haz clic aquí</button>
+
+    <div id="contenidoSorpresa" class="oculto video-container">
+      <!-- Aquí aparecerá el video y luego el botón "Más" -->
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Si quieres, envíame un mensaje y te responderé con más amor 💌</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Con todo mi amor</p>
+</footer>
+
+<script>
+  function mostrarSorpresa() {
+    document.getElementById("btnSorpresa").style.display = "none";
+
+    const contenedor = document.getElementById("contenidoSorpresa");
+    contenedor.classList.remove("oculto");
+
+    // Insertar el video y un contenedor vacío para el botón
+    contenedor.innerHTML = `
+      <iframe
+        width="560"
+        height="315"
+      src="https://www.youtube.com/embed/rah4OquKex8?autoplay=1"
+        title="Video sorpresa"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+      <div id="btnMasContainer" class="oculto">
+        <a href="youtube.html" class="boton-mas">Más</a>
+      </div>
+    `;
+
+    // Mostrar el botón "Más" después de 3 minutos (180000 ms)
+    setTimeout(() => {
+      document.getElementById("btnMasContainer").classList.remove("oculto");
+    }, 600); // Cambia este tiempo si el video es más corto o largo
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #01380a;
+  color: white;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(1, 56, 10, 0.6);
+}
+
+nav {
+  background-color: #007e73;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 1rem 0;
+  box-shadow: inset 0 -3px 6px rgba(0, 126, 115, 0.5);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: none;
+  background-color: #005a50;
+  box-shadow: 0 0 8px #00bfa5;
+  outline: none;
+}
+
+main {
+  padding: 2.5rem 1.5rem;
+  max-width: 700px;
+  margin: 2rem auto 4rem auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+  color: #01380a;
+  margin-top: 0;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+button {
+  background-color: #037a70;
+  color: white;
+  border: none;
+  padding: 0.85rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.35s ease, transform 0.2s ease;
+  margin-top: 1.25rem;
+  box-shadow: 0 4px 12px rgba(3, 122, 112, 0.5);
+  font-weight: 600;
+}
+
+button:hover,
+button:focus {
+  background-color: #01380a;
+  transform: scale(1.05);
+  outline: none;
+  box-shadow: 0 6px 18px rgba(1, 56, 10, 0.7);
+}
+
+.oculto {
+  display: none;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#mensajeSorpresa img {
+  max-width: 100%;
+  margin-top: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(1, 56, 10, 0.2);
+}
+
+footer {
+  background-color: #01380a;
+  color: white;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 -3px 8px rgba(1, 56, 10, 0.7);
+  font-size: 1rem;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  nav a {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
+  
+  main {
+    margin: 1.5rem 1rem 5rem 1rem;
+    padding: 2rem 1rem;
+  }
+
+  header {
+    font-size: 1.5rem;
+    padding: 1rem 0.75rem;
+  }
+  
+  button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  footer {
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+  }
+}
+.boton-mas {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff4081;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.boton-mas:hover {
+  background-color: #e91e63;
+}
+

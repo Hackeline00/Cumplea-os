@@ -1,0 +1,327 @@
+/* Fuentes y base */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  background: #f9f9f9;
+  color: #0f0f0f;
+}
+
+/* Header estilo YouTube */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px 20px;
+  color: #0f0f0f;
+  font-weight: 700;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  flex-wrap: wrap; /* Para que en móviles no se rompa */
+  gap: 10px;
+}
+
+/* Logo */
+.logo-img {
+  height: 32px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f0f0f;
+  white-space: nowrap;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-grow: 1; /* Para que tome espacio disponible */
+  max-width: 500px;
+}
+
+.search-bar input {
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  min-width: 100px;
+  box-sizing: border-box;
+}
+
+/* Botón de búsqueda */
+.search-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Color normal (sin amarillo) */
+.search-bar button:hover {
+  background-color: #f2f2f2;
+}
+
+/* Color activo cuando se presiona (gris) */
+.search-bar button:active,
+.search-bar button.active {
+  background-color: #999999;
+}
+
+/* Icono del botón búsqueda */
+.icon {
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+  filter: invert(20%) sepia(80%) saturate(500%) hue-rotate(340deg);
+}
+
+/* Botón Volver */
+#volverBtn {
+  background-color: transparent;
+  border: 1px solid #0f0f0f;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+#volverBtn:hover {
+  background-color: #e5e5e5;
+}
+
+/* Avatar */
+.avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 20px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Sección del video y comentarios */
+.video-section {
+  flex: 2;
+  margin-right: 20px;
+}
+
+/* Contenedor del video */
+.video-container {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+/* Video y iframe con fondo blanco */
+#introVideo,
+#ytVideo {
+  width: 100%;
+  height: 315px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: none;
+  display: block;
+  object-fit: cover;
+}
+
+/* Título estilo YouTube */
+h1 {
+  font-weight: 500;
+  font-size: 22px;
+  margin: 12px 0 6px 0;
+  color: #0f0f0f;
+}
+
+/* Info de vistas y fecha */
+.views {
+  font-weight: 400;
+  font-size: 14px;
+  color: #606060;
+  margin-bottom: 20px;
+}
+
+/* Comentarios */
+.comments {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.comments h2 {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.comment img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.comment div {
+  font-size: 14px;
+  color: #333;
+}
+
+.comment strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+/* Sugerencias */
+.suggestions {
+  flex: 1;
+  max-width: 350px;
+}
+
+.suggestions h3 {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #0f0f0f;
+}
+
+.suggestions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestions li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.suggestions li:hover {
+  background-color: #f2f2f2;
+}
+
+.suggestions li img {
+  width: 80px;
+  height: 45px;
+  margin-right: 12px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background-color: #ddd;
+}
+
+/* Banner publicitario */
+.banner-video {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/* ==== Responsive para celular ==== */
+@media screen and (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    padding: 10px 15px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .search-bar {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .video-section {
+    margin-right: 0;
+  }
+
+  .suggestions {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .suggestions li img {
+    width: 60px;
+    height: 34px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .views {
+    font-size: 12px;
+  }
+
+  .comments h2 {
+    font-size: 16px;
+  }
+
+  .comment img {
+    width: 36px;
+    height: 36px;
+  }
+
+  #volverBtn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .avatar {
+    height: 36px;
+    width: 36px;
+  }
+}
